@@ -24,6 +24,7 @@ const Pino = require("pino")
 const readline = require("readline")
 const { parsePhoneNumber } = require("libphonenumber-js")
 const makeWASocket = require("@whiskeysockets/baileys").default
+const port = process.env.PORT || 10000; // Assurez-vous d'ajouter cette ligne pour définir le port
 
 const store = makeInMemoryStore({
     logger: pino().child({
